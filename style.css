@@ -1,0 +1,45 @@
+* {
+    background-color: black;
+    color: lightgreen;
+}
+
+h1 {
+    font: bold 24pt monospace;
+}
+
+h2 {
+    font: bold 18pt monospace;
+}
+
+p {
+    font: normal 16pt monospace;
+}
+
+p#disclaimer {
+    font: normal 12pt monospace;
+}
+
+div#master {
+    display: grid;
+    grid-template-columns: 50% 50%; 
+}
+
+div#output-container {
+    margin-left: 20px;
+}
+
+footer {
+    font: normal 12pt monospace;
+    position: absolute;
+    text-align: center;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+input#initbutton {
+    font: normal 26pt monospace;
+    border: none;
+    color: black;
+    background-color: lightgreen;
+}

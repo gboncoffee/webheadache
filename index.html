@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Headache - Brainfuck interpreter</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <script type="text/javascript" src="headache.js"></script>
+
+        <h1>Brainfuck</h1>
+
+        <p>
+        <a href="https://en.wikipedia.org/wiki/Brainfuck">Brainfuck programming language</a> 
+        interpreter on your browser. Enter the Brainfuck program in the left
+        text area and the stdin in the right text area. Then check the output
+        above the stdin.
+        </p>
+
+        <div id="master">
+            <textarea placeholder="Write the Brainfuck program here..."
+                rows=30
+                cols=80
+                id="input"></textarea>
+            <div id="output-container">
+                <textarea placeholder="Enter the input here..."
+                    rows=5
+                    cols=80
+                    id="stdin"></textarea>
+                <input id="initbutton" type="button" value="Run!" onclick="runBrainfuck()">
+                <h2>Output:</h2>
+                <p id="output">
+                </p>
+            </div>
+        </div>
+
+        <p id="disclaimer">
+        Disclaimer: everything here is running locally on your machine, so
+        trying to use Brainfuck to harm the server-side of this site can only
+        produce harm to you.
+        </p>
+
+        <footer>
+            &copy; Gabriel G. de Brito <br> Source avaiable at <a href="https://github.com/gboncoffee/webheadache">GitHub</a>
+        </footer>
+    </body>
+
+</html>
