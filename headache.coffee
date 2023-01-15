@@ -27,9 +27,9 @@ brainloop = (ip, text) ->
     forward = if char is ']' then false else true
 
     if char is '['
-        other = ']' 
+        other = ']'
         ip += 1
-    else 
+    else
         other = '['
         ip -= 1
 
@@ -43,15 +43,15 @@ brainloop = (ip, text) ->
             return ip
 
         if text[ip] is other and pad > 0
-            pad -= 1 
+            pad -= 1
         else if text[ip] is other and pad == 0
             return ip + 1
 
         pad += 1 if text[ip] is char
 
-        if forward 
-            ip += 1 
-        else 
+        if forward
+            ip += 1
+        else
             ip -= 1
 
 runText = (text, input) ->
@@ -67,24 +67,24 @@ runText = (text, input) ->
         switch text[ip]
             when '>' then dp += 1
             when '<' then dp -= 1
-            when ',' 
+            when ','
                 mem[dp] = input.charCodeAt input_c
                 input_c += 1
-            when '.' 
+            when '.'
                 mem[dp] = 0 unless mem[dp]?
                 output += String.fromCharCode mem[dp]
-            when '[' 
+            when '['
                 mem[dp] = 0 unless mem[dp]?
                 if mem[dp] is 0
                     ip = brainloop ip, text
-            when ']' 
+            when ']'
                 mem[dp] = 0 unless mem[dp]?
                 unless mem[dp] is 0
                     ip = brainloop ip, text
-            when '+' 
+            when '+'
                 mem[dp] = 0 unless mem[dp]?
                 mem[dp] += 1
-            when '-' 
+            when '-'
                 mem[dp] = 1 unless mem[dp]?
                 mem[dp] -= 1
 
